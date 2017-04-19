@@ -1,3 +1,8 @@
+####ToDo-Panda
+
+T3JS framework based implementation of "todo" app.
+
+
 #### Project dependencies:
 
 - RequireJS
