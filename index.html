@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>ToDo Panda: T3JS based todo app.</title>
+        
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/ionicons/ionicons.min.css">
+        <link rel="stylesheet" href="styles/bricks.css">
+        <link rel="stylesheet" href="styles/custom.css">
+    </head>
+    <body data-module="page">
+        <header data-module="header">
+            <div class="wrapper max-wrap660">
+                <h1>
+                    <i class="ion-ios-compose-outline"></i> ToDo-Panda
+                </h1>
+                <form>
+                    <input type="text" placeholder="What you want to do today?">
+                    <!--<button type="submit" class="btn">
+                        <i class="ion-android-add-circle"></i>
+                    </button>-->
+                </form>
+            </div>
+        </header>
+        
+        <div class="wrapper max-wrap660">
+            <ul id="todoStatusBar" data-module="statusBar">
+                <li>
+                    <span><span class="itemsLeft">0</span> item(s) left</span>
+                </li>
+                <li class="filter">
+                    <a class="filterLabel labelActive" href="#all">All</a>
+                    <a class="filterLabel" href="#active">Active</a>
+                    <a class="filterLabel" href="#completed">Completed</a>
+                </li>
+                <li class="txt-right">
+                    <span class="filterLabel" data-type="clearBtn">Clear Completed</span>
+                </li>
+            </ul>
+            
+            
+            <ul id="todoList" data-module="list">
+                <!--<li>
+                    <span class="todoCheckBtn">&nbsp;</span>
+                    Go to webshop.
+                </li>
+                <li>
+                    <span class="todoCheckBtn">
+                        <i class="ion-android-done"></i>
+                    </span>
+                    <span class="todoText todoLineThrough">
+                        Buy frontend frameworks.
+                    </span>
+                    <span class="todoDelete">
+                        &times;
+                    </span>
+                </li>
+                <li>
+                    <span class="todoCheckBtn">&nbsp;</span>
+                    Get rid of bad design.
+                </li>-->
+            </ul>
+        </div>
+        
+        <script type="text/x-template" id="todoListTemplate">
+            <li data-todo-id="{{= it.todo.id }}" data-checked="false">
+                <span class="todoCheckBtn" data-type="completed-btn">
+                    <i class="ion-checkmark {{? !it.todo.completed }}hide{{?}}"></i>
+                </span>
+                <span class="todoText {{? it.todo.completed }}todoLineThrough{{?}}">
+                    {{= it.todo.title }}
+                </span>
+                <span class="todoDelete" data-type="delete-btn">&times;</span>
+            </li>
+        </script>
+        
+        <!-- Load scripts -->
+        <script src="scripts/lib/t3.min.js"></script>
+        <script data-main="scripts/app" src="scripts/lib/require.js"></script>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+.max-wrap660 {
+    max-width: 660px;
+}
+header {
+    /*height: 20vh;*/
+    color: #000;
+    background: #FFEB3B;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+header form .btn {
+    padding: 0;
+    color: #c29307;
+    vertical-align: text-bottom;
+}
+header form .btn:hover {
+    background: transparent;
+    color: #000;
+}
+header form button i {
+    font-size: 4.2rem;
+}
+header form input[type="text"] {
+    width: 50%;
+    border-color: #FFEB3B;
+    color: #cd5c5c;
+    font-size: 1.8rem;
+    height: 4rem;
+    line-height: 4rem;
+    background: #fff7ae;
+    transition: all ease 0.3s;
+}
+header form input[type="text"]:focus {
+    background-color: #fef9d1;
+    border-color: #FFEB3B;
+    width: 80%;
+}
+#todoStatusBar {
+    list-style: none;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+#todoStatusBar:first-child {
+    padding-left: 1.2rem !important;
+}
+#todoStatusBar li {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    width: 32%;
+    color: #000;
+}
+#todoStatusBar li.filter a {
+    color: #000;
+    margin-right: 0.3rem;
+    padding: 0.3rem 0.5rem;
+}
+#todoStatusBar li.filter a.filterLabel {
+    margin-right: 1rem;
+}
+/*#todoStatusBar li.filter a.filterLabel:hover {
+    cursor: pointer;
+}*/
+span.filterLabel:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#todoStatusBar li.filter a.labelActive {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+#todoList {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+#todoList li {
+    font-size: 1.8rem;
+    padding: 1.2rem;
+    margin: 0;
+    position: relative;
+    border-bottom: 1px solid #f1f1f1;
+}
+#todoList li:hover span.todoDelete {
+    display: inherit;
+}
+span.todoCheckBtn {
+    display: inline-block;
+    height: 21px;
+    width: 21px;
+    background-color: #607D8B;
+    vertical-align: sub;
+    margin-right: 1rem;
+    border-radius: 2px;
+}
+span.todoCheckBtn .ion-checkmark {
+    position: relative;
+    top: -0.3rem;
+    color: #fff;
+    left: 0.3rem;
+    font-weight: 700;
+}
+.todoLineThrough {
+    text-decoration: line-through;
+}
+.todoDelete {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #cc9a9a;
+    transition: color 0.2s ease-out;
+}
+.todoDelete:hover {
+    color: #cd5c5c;
+    cursor: pointer;
+}
